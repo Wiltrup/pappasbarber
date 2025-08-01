@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PappasBarber.dk</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      color: #ccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo-container {
+      animation: subtle-bounce 6s ease-in-out infinite;
+      position: relative;
+    }
+
+    @keyframes subtle-bounce {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    .blink-overlay {
+      position: absolute;
+      top: 32%;
+      left: 46%;
+      width: 12px;
+      height: 6px;
+      background-color: #1e1e1e;
+      border-radius: 50%;
+      opacity: 0;
+      animation: blink 6s infinite ease-in-out;
+      z-index: 2;
+    }
+
+    @keyframes blink {
+      0%, 90%, 100% {
+        opacity: 0;
+      }
+      92%, 94% {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 70vh;
+      height: auto;
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      background-color: #121212;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo-container">
+      <img src="logo.png" alt="PappasBarber.dk logo">
+      <div class="blink-overlay"></div>
+    </div>
+  </main>
+  <footer>
+    © 2025 PappasBarber.dk – Alle rettigheder forbeholdes
+  </footer>
+</body>
+</html>
