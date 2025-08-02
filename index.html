@@ -8,8 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      background: #1e1e1e;
-      color: #ccc;
+      background: #f5e3c3; /* Beige baggrund */
+      color: #333;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       flex-direction: column;
@@ -22,58 +22,36 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      position: relative;
     }
 
     .logo-container {
-      animation: subtle-bounce 6s ease-in-out infinite;
-      position: relative;
+      animation: pulse 4s ease-in-out infinite;
     }
 
-    @keyframes subtle-bounce {
+    @keyframes pulse {
       0%, 100% {
-        transform: translateY(0px);
+        transform: scale(1);
       }
       50% {
-        transform: translateY(-3px);
-      }
-    }
-
-    .blink-overlay {
-      position: absolute;
-      top: 32%;
-      left: 46%;
-      width: 12px;
-      height: 6px;
-      background-color: #1e1e1e;
-      border-radius: 50%;
-      opacity: 0;
-      animation: blink 6s infinite ease-in-out;
-      z-index: 2;
-    }
-
-    @keyframes blink {
-      0%, 90%, 100% {
-        opacity: 0;
-      }
-      92%, 94% {
-        opacity: 0.8;
+        transform: scale(1.02);
       }
     }
 
     img {
+      display: block;
+      margin: 0 auto;
       max-width: 90%;
       max-height: 70vh;
       height: auto;
-      display: block;
+      width: auto;
     }
 
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
-      color: #666;
-      background-color: #121212;
+      color: #555;
+      background-color: rgba(0,0,0,0.05);
     }
   </style>
 </head>
@@ -81,11 +59,10 @@
   <main>
     <div class="logo-container">
       <img src="logo.png" alt="PappasBarber.dk logo">
-      <div class="blink-overlay"></div>
     </div>
   </main>
   <footer>
-    © 2025 PappasBarber.dk – Alle rettigheder forbeholdes
+    © 2025 PappasBarber.dk – Alle rettigheder forbeholdes. Pappasbarber.dk og dets subdomæner er ejet af Jakob Wiltrup og er en del af wiltrup.com-universet. Kontakt wiltrup@wiltrup.com for yderligere informationer.
   </footer>
 </body>
 </html>
